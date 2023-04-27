@@ -9,17 +9,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HomePageComponent } from './Home-tab/home-page/home-page.component';
 import { CompanyBillComponent } from './Home-tab/company-bill/company-bill.component';
-import { CompanyInventoryComponent } from './Home-tab/company-inventory/company-inventory.component';
-import { WorkerInfoComponent } from './Home-tab/worker-info/worker-info.component';
-import { CompanyMachinesComponent } from './Home-tab/company-machines/company-machines.component';
-import { EmployeeModalComponent } from './Home-tab/worker-info-modal/employee-modal.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompanyBillModalComponent } from './Home-tab/company-bill-modal/company-bill-modal.component';
-import { CompanyInventoryModalComponent } from './Home-tab/company-inventory-modal/company-inventory-modal.component';
-import { CompanyMachinesModalComponent } from './Home-tab/company-machines-modal/company-machines-modal.component';
 import { CompanyBillInfoModalComponent } from './Home-tab/company-bill-info-modal/company-bill-info-modal.component';
 
 
@@ -29,17 +22,9 @@ const MaterialComponent=[
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
     CompanyBillComponent,
-    CompanyInventoryComponent,
-    WorkerInfoComponent,
-    CompanyMachinesComponent,
-    EmployeeModalComponent,
     CompanyBillModalComponent,
-    CompanyInventoryModalComponent,
-    CompanyMachinesModalComponent,
     CompanyBillInfoModalComponent
-    
   ],
   imports: [
     BrowserModule,
