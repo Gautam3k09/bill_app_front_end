@@ -1,5 +1,5 @@
-<div class="content " id="pdf">
-      <!-- top table -->
+<!-- <div class="content " id="pdf">
+      top table
   <table class="table" id="top-table">
     <tbody>
       <tr>
@@ -14,14 +14,6 @@
             E-Mail : kumarjay2050@gmail.com</p>
           <hr style="width: 100%;">
           <p class="address"> <img src="../../../assets/download.jpg" width="40" height="60"> {{ this.data.address}}
-            <!-- ADARSH TRADING COMPANY<br>
-            H. No. 1849/B-10, Oswal Industrial<br>
-            Complex, Sonale Bhiwandi - 421302<br>
-            Dist-Thane<br>
-            Mob. No. : +91 9860680435<br>
-            GSTIN/UIN: 27AXJPV3271A1ZF<br>
-            State Name : Maharashtra, Code : 27<br>
-            E-Mail : kumarjay2050@gmail.com</p> -->
         </td>
         <td>
           <table id="top-right-table">
@@ -55,7 +47,7 @@
     </tbody>
   </table>
 
-  <!-- mid-table  -->
+  mid-table 
   <table style="width: 100%; margin-top: -17px;" id="mid-table">
     <thead class="mid-table-bill-area">
       <td style="width: 10%;">no.</td>
@@ -82,7 +74,7 @@
         <td></td>
         <td>{{this.data.grandTotal}}</td>
       </tr>
-      <!-- amount in word -->
+      amount in word
       <tr>
         <td colspan='6' >
           <div>
@@ -183,7 +175,7 @@
         </td>
         <td colspan="2">360</td>
       </tr>
-      <!-- total  -->
+      total 
       <tr style="height: 30px;">
         <td>  total</td>
         <td> 2000</td>
@@ -237,6 +229,112 @@
 
       </tr>
     </tbody>
+  </table>
+</div>
+
+<div class="content">
+  <input type="button" value="Convert" (click)="convetToPDF()"/>
+</div> -->
+
+
+
+
+<div class="content " id="pdf">
+  <div class="content-header-email">
+    <div class="b"><h6>Email:sudamaenterprises132@gmail.com</h6></div>
+    <div class="a"><h5>Tax Invoice</h5></div>
+    <div class="c"><h5>ph:02522 282425</h5></div>
+  </div>
+  <div class="content-header-email">
+    <img src="../../../assets/download.jpg" width="10%" height="25%">
+    <div class="a" style="margin-left: 15%;"><h1>Sudama Enterprises</h1></div>
+    <div class="c"><pre><h5>mob:7738917937
+      7798074504
+      7021910455
+    </h5></pre></div>
+   </div>
+  <div class="a" style="margin-top: -8%;"><h4>The only Name for Quality and Services</h4></div>
+  <div class="a" style="margin-top: -1%;"><h4>Spl . In : Doriner Machine Parts</h4></div>
+  <div class="a" style="margin-top: -1%;"><h4>Add : A, 004, Sahyog Park CHS. Society, Kalyan (W). Dist-Thane</h4></div>
+  <div class="a" style="margin-top: -1%;"><h4>GST NO.:27AGNPJ9209R1ZH</h4></div>
+  <div class="content-header-email"> 
+  <div class="b"><h4>Invoice NO. : {{this.data.billNo}}</h4></div>
+  <div class="c"  style="margin-right: 10%;"><h3>Date No. {{this.slicedDate}}</h3></div>
+  </div>
+  <div>Name: {{this.data.companyName}}</div>
+  <div>Address : {{this.data.address}}</div>
+  <div class="content-header-email"> 
+    <div class="b">GSTIN : {{this.data.gstNo}}</div>
+    <div class="c"  style="margin-right: 10%;">HSN code 8448</div>
+  </div>
+
+  <table class="table" id="top-table" >
+    <thead style="text-align: center;">
+      <th style="width:1%;" >S.no</th>
+      <th>Description of Goods</th>
+      <th style="width:1%;">Qty</th>
+      <th style="width:3%;">Rate</th>
+      <th style="width:3%;">Amount</th>
+    </thead>
+    <tbody  >
+      <tr *ngFor="let lists of data.item; let i = index;"  style="text-align: center;">
+        <td>{{i + 1}}</td>
+        <td>{{lists.itemName}}</td>
+        <td>{{lists.quantity}}</td>
+        <td>{{lists.rate}}</td>
+        <td>{{lists.amount}}</td>
+      </tr>
+        <tr *ngIf="data.item.length < 12" style="height:10vw;" >
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      
+      </tbody>
+
+      <tbody>
+      <tr style="border:0px">
+        <td colspan="2" rowspan="3">Invoice amount (in words Rs:) {{ this.data.grandTotalInWords}}</td>
+        <td colspan="2" style="text-align: center;">Total </td>
+        <td style="text-align: center;">{{this.totalAmountWithoutTax}}</td>
+      </tr>
+      <tr style="text-align: center;" >
+        <td colspan="2">SGST</td>
+        <td>{{this.sgstAmount}}</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td colspan="2">IGST</td>
+        <td>{{this.igstAmount}}</td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="3" style="text-align: center;">Bank Details<br>ICICI bank<br>A/c No.:008805004171 IFSC Code: ICIC0000088</td>
+        <td style="text-align: center;" colspan="2">CGST</td>
+        <td style="text-align: center;">{{this.cgstAmount}}</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td colspan="2">g total</td>
+        <td>{{this.data.grandTotal}}</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td id="bottomborderNone" style="text-align: center;" colspan="4">For Sudama Enterprises</td>
+      </tr>
+
+      <tr>
+        <td colspan="6"  style="width: 50%;"><pre>
+Terms & condition of sales :
+1.Goods Once sold will not be taken back.
+2.No complaint will be entertain  after 7 days  from invoice Pr
+        </pre>
+        <div style="text-align: right; margin-right: 4%;">Prop.</div>
+        </td>
+        
+      </tr>
+      
+
+    </tbody>
+    
   </table>
 </div>
 

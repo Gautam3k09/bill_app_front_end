@@ -1,15 +1,16 @@
 .content {
-  margin-left: -40%;
+    /* margin-top: 10px ; */
+    margin-left: -40%;
     background-color: #fefefe;
-    padding: 5px;
+    padding: 20px;
     width:1000px;
   }
 
-  .xlModal > .modal-dialog {
+  /* .xlModal > .modal-dialog {
     
     max-width: 1490px !important;
     min-width: 971px !important;   
-    /* width: 95% !important; */
+    width: 95% !important;
 }
 
 td{
@@ -24,13 +25,13 @@ td{
 
 #top-right-table{
   height: 380px !important;
-  /* table-layout: fixed; */
-  /* border-collapse: collapse; */
+  table-layout: fixed;
+  border-collapse: collapse;
   width: 100%;
 }
 #mid-table {
   table-layout: fixed;
-  /* border-collapse: collapse; */
+  border-collapse: collapse;
   width: 100%;
 }
 
@@ -46,7 +47,7 @@ td{
 
 #bot-table {
   table-layout: fixed;
-  /* border-collapse: collapse; */
+  border-collapse: collapse;
   width: 100%;
 }
 
@@ -75,4 +76,60 @@ td{
 
 th {
   width: 25%
+} */
+
+
+.content-header-email{
+/* display: inline-block; */
+width: 100%;
+display: flex;
 }
+
+.content-line1{
+  float: right;
+}
+
+
+div.a {
+  /* color: #000;
+  display: block;
+  padding: 0 65px 0 0;
+  text-decoration: none;
+  */
+  width:100%; 
+  text-align: center;
+}
+
+div.b {
+  /* color: #000;
+  display: block;
+  padding: 0 65px 0 0;
+  text-decoration: none; */
+  width:100%;
+  text-align: left;
+}
+
+div.c {
+  /* color: #000;
+  display: block;
+  padding: 0 65px 0 0;
+  text-decoration: none; */
+  width:100%;
+  text-align: right;
+} 
+
+#top-table{
+  width:100%;
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+th , td{
+  border: 1px solid black;
+}
+
+#bottomborderNone {
+  border-left: none !important;
+  border-right: none !important;
+}
+
